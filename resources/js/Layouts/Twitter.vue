@@ -1,18 +1,19 @@
 <script setup>
-import { ref } from "vue"
-import { router } from "@inertiajs/vue3";
+import { ref } from 'vue';
+import { router } from '@inertiajs/vue3';
 import Twitter from 'vue-material-design-icons/Twitter.vue';
 import Magnify from 'vue-material-design-icons/Magnify.vue';
 import DotsHorizontal from 'vue-material-design-icons/DotsHorizontal.vue';
 import Feather from 'vue-material-design-icons/Feather.vue';
-import ChevronDown from 'vue-material-design-icons/ChevronDown.vue';
 import Close from 'vue-material-design-icons/Close.vue';
+import ChevronDown from 'vue-material-design-icons/ChevronDown.vue';
 import Earth from 'vue-material-design-icons/Earth.vue';
 import ImageOutline from 'vue-material-design-icons/ImageOutline.vue';
 import FileGifBox from 'vue-material-design-icons/FileGifBox.vue';
 import Emoticon from 'vue-material-design-icons/Emoticon.vue';
 import ArrowLeft from 'vue-material-design-icons/ArrowLeft.vue';
 import MenuItem from '@/Components/MenuItem.vue'
+
 let createTweet = ref(false)
 let tweet = ref('')
 let file = ref('')
@@ -56,6 +57,7 @@ const textareaInput = (e) => {
     textarea.value.style.height = "auto";
     textarea.value.style.height = `${e.target.scrollHeight}px`;
 };
+
 </script>
 
 <template>
@@ -76,6 +78,7 @@ const textareaInput = (e) => {
                     <span class="block lg:hidden"><Feather /></span>
                 </button>
             </div>
+
             <div class="lg:w-7/12 w-11/12 border-x border-gray-800 relative">
                 <div class=" bg-black bg-opacity-50 backdrop-blur-md z-10 absolute w-full">
                     <div class="border-gray-800 border-b w-full">
@@ -181,7 +184,7 @@ const textareaInput = (e) => {
         </div>
     </div>
 
-    <div id="OverlaySection"  v-if="createTweet" class="fixed top-0 left-0 w-full h-screen bg-black md:bg-gray-400 md:bg-opacity-30 md:p-3">
+    <div id="OverlaySection" v-if="createTweet" class="fixed top-0 left-0 w-full h-screen bg-black md:bg-gray-400 md:bg-opacity-30 md:p-3">
         <div class="md:max-w-2xl md:mx-auto md:mt-10 md:rounded-xl bg-black">
 
             <div class=" flex items-center justify-between md:inline-block p-2 m-2 rounded-full cursor-pointer">
@@ -268,8 +271,3 @@ const textareaInput = (e) => {
         </div>
     </div>
 </template>
-<style>
-body{
-    background-color: black;
-}
-</style>
