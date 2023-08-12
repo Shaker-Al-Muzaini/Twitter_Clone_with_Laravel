@@ -1,4 +1,4 @@
-<script setup>   
+<script setup>  
 import { ref } from "vue"
 import { router } from "@inertiajs/vue3";
 import Twitter from 'vue-material-design-icons/Twitter.vue';
